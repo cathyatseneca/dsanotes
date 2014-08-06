@@ -1,0 +1,465 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="../manifest.appcache">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Analysis of Linear Search | Algorithms and Data Structures in C++</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="">
+        <meta name="description" content="Algorithms and Data Structures looks at how data for computer programs can best be represented and processed.  In this course you will learn several standard algorithms and data structures.  Furthermore, we will also look at how you would go about doing a formal analysis of an algorithm.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../recursion/README.html" />
+        
+        
+        <link rel="prev" href="../analysis/notations.html" />
+        
+
+        <meta property="og:title" content="Analysis of Linear Search | Algorithms and Data Structures in C++">
+        <meta property="og:site_name" content="Algorithms and Data Structures in C++">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    </head>
+    <body>
+        
+
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+
+
+        
+    <div class="book"  data-level="1.3" data-basepath=".." data-revision="1407332576507">
+    <div class="book-header">
+    <!-- Actions Left -->
+    
+    <a href="https://github.com/null" target="_blank" class="btn pull-left"><i class="fa fa-bookmark-o"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+	<div class="dropdown-caret">
+  <span class="caret-outer"></span>
+  <span class="caret-inner"></span>
+</div>
+
+	<div class="btn-group btn-block">
+		<button id="reduce-font-size" class="btn btn-default">A</button>
+		<button id="enlarge-font-size" class="btn btn-default">A</button>
+	</div>
+
+	<ul class="list-group font-family-list">
+		<li class="list-group-item" data-font="0">Serif</li>
+		<li class="list-group-item" data-font="1">Sans</li>
+	</ul>
+
+	<div class="btn-group btn-group-xs btn-block color-theme-list">
+	  <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+	</div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+    
+
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="../" >Algorithms and Data Structures in C++</a>
+    </h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+
+        
+        <li>
+            <a href="https://github.com/null/issues" target="blank">Questions and Issues</a>
+        </li>
+        
+
+        
+        <li>
+            <a href="https://github.com/null/edit/master/analysis/example1.md" target="blank">Edit and Contribute</a>
+        </li>
+        
+
+        
+
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="analysis/README.html">
+                
+                <a href="../analysis/README.html">
+                    <i class="fa fa-check"></i> <b>1.</b> Chapter 1:Introduction to Algorithms Analysis
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="analysis/growth.html">
+                            
+                            <a href="../analysis/growth.html">
+                                <i class="fa fa-check"></i> <b>1.1.</b> Growth Rates
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="analysis/notations.html">
+                            
+                            <a href="../analysis/notations.html">
+                                <i class="fa fa-check"></i> <b>1.2.</b> Big-O, Little-o, Theta, Omega
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="analysis/example1.html">
+                            
+                            <a href="../analysis/example1.html">
+                                <i class="fa fa-check"></i> <b>1.3.</b> Analysis of Linear Search
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="recursion/README.html">
+                
+                <a href="../recursion/README.html">
+                    <i class="fa fa-check"></i> <b>2.</b> Recursion
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="recursion/the_runtime_stack.html">
+                            
+                            <a href="../recursion/the_runtime_stack.html">
+                                <i class="fa fa-check"></i> <b>2.1.</b> The runtime stack
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="recursion/article.html">
+                            
+                            <a href="../recursion/article.html">
+                                <i class="fa fa-check"></i> <b>2.2.</b> How to Write a Recursive Function
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="recursion/drawbacks_of_recursion_and_caution.html">
+                            
+                            <a href="../recursion/drawbacks_of_recursion_and_caution.html">
+                                <i class="fa fa-check"></i> <b>2.3.</b> Drawbacks of Recursion and Caution
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="lists/README.html">
+                
+                <a href="../lists/README.html">
+                    <i class="fa fa-check"></i> <b>3.</b> Lists
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="4" data-path="the_stack/README.html">
+                
+                <a href="../the_stack/README.html">
+                    <i class="fa fa-check"></i> <b>4.</b> Stacks
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="5" data-path="queue/README.html">
+                
+                <a href="../queue/README.html">
+                    <i class="fa fa-check"></i> <b>5.</b> Queue
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="6" data-path="sorting/README.html">
+                
+                <a href="../sorting/README.html">
+                    <i class="fa fa-check"></i> <b>6.</b> Sorting
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="7" data-path="tables/README.html">
+                
+                <a href="../tables/README.html">
+                    <i class="fa fa-check"></i> <b>7.</b> Tables
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="8" data-path="introduction_to_trees,_binary_search_trees/README.html">
+                
+                <a href="../introduction_to_trees,_binary_search_trees/README.html">
+                    <i class="fa fa-check"></i> <b>8.</b> Introduction to Trees, Binary Search Trees
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="9" data-path="avl_trees/README.html">
+                
+                <a href="../avl_trees/README.html">
+                    <i class="fa fa-check"></i> <b>9.</b> AVL Trees
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="10" data-path="red_black_trees/README.html">
+                
+                <a href="../red_black_trees/README.html">
+                    <i class="fa fa-check"></i> <b>10.</b> Red Black Trees
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="11" data-path="2-3_trees/README.html">
+                
+                <a href="../2-3_trees/README.html">
+                    <i class="fa fa-check"></i> <b>11.</b> 2-3 Trees
+                </a>
+                
+                
+            </li>
+        
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank">Generated using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 23.529411764705884%;min-width: 17.647058823529413%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../analysis/README.html" title="Chapter 1:Introduction to Algorithms Analysis" class="chapter done new-chapter" data-progress="1" style="left: 5.882352941176471%;"></a>
+    
+        <a href="../analysis/growth.html" title="Growth Rates" class="chapter done " data-progress="1.1" style="left: 11.764705882352942%;"></a>
+    
+        <a href="../analysis/notations.html" title="Big-O, Little-o, Theta, Omega" class="chapter done " data-progress="1.2" style="left: 17.647058823529413%;"></a>
+    
+        <a href="../analysis/example1.html" title="Analysis of Linear Search" class="chapter done " data-progress="1.3" style="left: 23.529411764705884%;"></a>
+    
+        <a href="../red_black_trees/README.html" title="Red Black Trees" class="chapter  " data-progress="10" style="left: 29.41176470588235%;"></a>
+    
+        <a href="../2-3_trees/README.html" title="2-3 Trees" class="chapter  " data-progress="11" style="left: 35.294117647058826%;"></a>
+    
+        <a href="../recursion/README.html" title="Recursion" class="chapter  new-chapter" data-progress="2" style="left: 41.1764705882353%;"></a>
+    
+        <a href="../recursion/the_runtime_stack.html" title="The runtime stack" class="chapter  " data-progress="2.1" style="left: 47.05882352941177%;"></a>
+    
+        <a href="../recursion/article.html" title="How to Write a Recursive Function" class="chapter  " data-progress="2.2" style="left: 52.94117647058823%;"></a>
+    
+        <a href="../recursion/drawbacks_of_recursion_and_caution.html" title="Drawbacks of Recursion and Caution" class="chapter  " data-progress="2.3" style="left: 58.8235294117647%;"></a>
+    
+        <a href="../lists/README.html" title="Lists" class="chapter  new-chapter" data-progress="3" style="left: 64.70588235294117%;"></a>
+    
+        <a href="../the_stack/README.html" title="Stacks" class="chapter  new-chapter" data-progress="4" style="left: 70.58823529411765%;"></a>
+    
+        <a href="../queue/README.html" title="Queue" class="chapter  new-chapter" data-progress="5" style="left: 76.47058823529412%;"></a>
+    
+        <a href="../sorting/README.html" title="Sorting" class="chapter  new-chapter" data-progress="6" style="left: 82.3529411764706%;"></a>
+    
+        <a href="../tables/README.html" title="Tables" class="chapter  new-chapter" data-progress="7" style="left: 88.23529411764706%;"></a>
+    
+        <a href="../introduction_to_trees,_binary_search_trees/README.html" title="Introduction to Trees, Binary Search Trees" class="chapter  new-chapter" data-progress="8" style="left: 94.11764705882354%;"></a>
+    
+        <a href="../avl_trees/README.html" title="AVL Trees" class="chapter  new-chapter" data-progress="9" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_40">
+                    
+                        <h2 id="how-to-do-an-analysis">How to do an Analysis</h2>
+<p>To look at how to perform analysis, we will start with a performance analysis of the following C++ function for a linear search:</p>
+<pre><code class="lang-c"><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> TYPE&gt;
+<span class="hljs-keyword">int</span> linearSearch(<span class="hljs-keyword">const</span> <span class="hljs-stl_container"><span class="hljs-built_in">vector</span>&lt;TYPE&gt;</span>&amp; arr, <span class="hljs-keyword">const</span> TYPE&amp; key){
+      <span class="hljs-keyword">int</span> rc=-<span class="hljs-number">1</span>;
+      <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;arr.size()&amp;&amp; rc==-<span class="hljs-number">1</span>;i++){
+            <span class="hljs-keyword">if</span>(arr[i]==key){
+                rc=i;
+        }
+      }
+      <span class="hljs-keyword">return</span> rc;
+}
+</code></pre>
+<p>We will make a few assumptions.  arr.size() runs in constant time.  That is no matter how big the array is, arr.size() takes the same amount of time to run. </p>
+<p>When we run the above algorithm, 2 things can occur.  The first is that we will find the key.  The second is that we won&#39;t.  The worst case scenario occurs when key is not in the array.  Thus, let us start by performing the analysis base on that worst case.</p>
+<h3 id="analysis-of-an-unsuccessful-search">Analysis of an Unsuccessful Search</h3>
+<p>Let n represent the size of the array arr.
+Let T(n) represent the number of operations necessary to perform linear search on an array of n items.</p>
+<p>Looking at the code, we see that there are some operations that we have to perform one time no matter what:</p>
+<pre><code>int rc = -1
+int i = 0
+return rc;
+</code></pre><p>So here, we can count these as 3 operations that have to occur at least once regardless of the size of the array.</p>
+<p>Now we then look at the rest of the code, if our search was to fail we would have to do all the other statements in the for loop (with the exception of rc=i) once per piece of data in the array.</p>
+<p>The following has to be done each time through the loop:</p>
+<pre><code>i&lt;arr.size() &amp;&amp; rc == -1   --&gt; 3 operations
+i++                        --&gt; 1 operation
+if(arr[i]==key)            --&gt; 2 operations
+</code></pre><p>6 operations in the loop total</p>
+<p>Now... some of you may also think... should the function call arr.size() be an operation itself?  or what about the [i] in arr[i]?  The truth is, it doesn&#39;t actually matter if we count them or not.  Let&#39;s take a look at why this is the case by finishing this analysis.</p>
+<p>Now... using the above we can express T(n) as follows:</p>
+<p>T(n) = 6n + 3</p>
+<p>The 6n comes from the 6 operations that we do each time through the loop.  We have n elements in the array.  Thus, the loop must run 6n times.  </p>
+<p>The + 3 comes from the 3 operations that we always have to do no matter what.</p>
+<p>Thus the expression for the number of operations that is performed is:</p>
+<p>T(n) = 6n + 3</p>
+<p>Now, imagine n becoming a very very large number.  As n gets bigger and bigger, the 3 matters less and less.  Thus, in the end we only care about 6n.  6n is the <em>dominating term</em> of the polynomial.  This is similar to this idea.  If you had 6 dollars, then adding 3 dollars is a significant increase to the amount of money you have.  However, if you had 6 million dollars, then 3 dollars matter very little.</p>
+<p>Using the dominating term, we can say that the linear search algorithm has a run time that never exceeds the curve for n.  In other words, linear search is O(n).</p>
+<p>Now... can we actually prove this?</p>
+<p>According to the formal definition for big-O</p>
+<p>&quot;T(n) is O(f(n))&quot; if for some constants \(c\) and \(n_0\), \(T(n)&lt;=cf(n)\) for all \(n &gt;= n_0\)</p>
+<p>In other words... to prove that T(n) = 6n + 3 is O(n) we must find 2 constants \(c\) and \(n_0\) such that the statement \(t(n) &lt;= cn\) is true for all \(n &gt;= n_0\)</p>
+<p>The important part about this... is to realize that we can pick any constant we want.  So, I will pick the c = 10.  (in fact, I can pick any number &gt; 6).   and \(n_0 = 1\)</p>
+<p>\(T(n) = 6n + 3 \)  <br /> 
+\(T(0) = 6(0) + 3 = 3 \) <br /> 
+\(T(1) = 6(1) + 3 = 9 \) <br />
+\(T(2) = 6(2) + 3 = 15 \) <br /> 
+\(T(3) = 6(3) + 3 = 21 \) <br /> 
+...</p>
+<p>our function f(n) = n.</p>
+<p>Thus:</p>
+<p>\(c f(n) = n\)  <br /> 
+\(c f(0) = 10(0) = 0\) <br /> 
+\(c f(1) = 10(1) = 10\) <br /> 
+\(c f(2) = 10(2) = 20\) <br /> </p>
+<p>As you can see the statement T(n) &lt;= cn is true for any value of all \(n &gt;= n_0\)</p>
+<p>Thus, we have proven that the function is O(n) because we were able to find the two constants \(c) and \(n_0\) needed for the T(n) to be O(n)</p>
+<p>This is also the reason why it did not matter if we counted the operations for the size() function call or the [i] operator.  If we counted both of them, </p>
+<p>T(n) = 8n + 3</p>
+<p>The dominating term would still be 8n.</p>
+<p>The proof would go exactly the same way except that we can&#39;t use \(n_0 = 1 \) as the statement T(n) &lt; cn is not true when n == 1.  However, when n = 2, T(n) = 19 and cn would be 20. Thus, it would be true and stays true for all values of n &gt; 2.</p>
+<h3 id="average-case-analysis">Average case analysis</h3>
+<p>In the previous analysis, we assumed we wouldn&#39;t find the data and thus the worst possible case of searching through the entire array was used to do the analysis.  However, what if the item was in the array? </p>
+<p>Assuming that key is equally likely to be in any element, we would have to search through n elements at worst and n/2 elements on average.</p>
+<p>Now since we will at some point find the item, the statement inside the if will also be performed.  Thus, we will have 4 operations that we must run through once.</p>
+<pre><code>int rc = -1
+int i = 0
+rc=i
+return rc;
+</code></pre><p>These other operations will also run for each iteration of the loop:</p>
+<pre><code>i&lt;arr.size() &amp;&amp; rc == -1   --&gt; 3 operations
+i++                        --&gt; 1 operation
+if(arr[i]==key)            --&gt; 2 operations
+</code></pre><p>The difference is we do not expect that the loop would have to run through the entire array.  On average we can say that it will go through half of the array.</p>
+<p>Thus:</p>
+<p>T(n) = 6 * 0.5 n + 3 = 3n + 3</p>
+<p>Now... as we said before... the constant of the dominating term does not actually matter.  3n is still n.  Our proof would go exactly as before for a search where the key would not found.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../analysis/notations.html" class="navigation navigation-prev "><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../recursion/README.html" class="navigation navigation-next "><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mixpanel/plugin.js"></script>
+    
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {};
+    gitbook.start(config);
+});
+</script>
+
+    </body>
+</html>
