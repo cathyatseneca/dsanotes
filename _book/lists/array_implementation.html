@@ -1,0 +1,506 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="../manifest.appcache">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Implementation | Algorithms and Data Structures in C++</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="cathyatseneca">
+        <meta name="description" content="Algorithms and Data Structures looks at how data for computer programs can best be represented and processed.  In this course you will learn several standard algorithms and data structures.  Furthermore, we will also look at how you would go about doing a formal analysis of an algorithm.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../lists/linked_list.html" />
+        
+        
+        <link rel="prev" href="../lists/README.html" />
+        
+
+        <meta property="og:title" content="Implementation | Algorithms and Data Structures in C++">
+        <meta property="og:site_name" content="Algorithms and Data Structures in C++">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/cathyatseneca">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    </head>
+    <body>
+        
+
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+
+
+        
+    <div class="book" data-github="cathyatseneca/dsanotes" data-level="3.1" data-basepath=".." data-revision="1407803243135">
+    <div class="book-header">
+    <!-- Actions Left -->
+    
+    <a href="https://github.com/cathyatseneca/dsanotes" target="_blank" class="btn pull-left"><i class="fa fa-bookmark-o"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+	<div class="dropdown-caret">
+  <span class="caret-outer"></span>
+  <span class="caret-inner"></span>
+</div>
+
+	<div class="btn-group btn-block">
+		<button id="reduce-font-size" class="btn btn-default">A</button>
+		<button id="enlarge-font-size" class="btn btn-default">A</button>
+	</div>
+
+	<ul class="list-group font-family-list">
+		<li class="list-group-item" data-font="0">Serif</li>
+		<li class="list-group-item" data-font="1">Sans</li>
+	</ul>
+
+	<div class="btn-group btn-group-xs btn-block color-theme-list">
+	  <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+	</div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+    
+
+    
+    <a href="https://github.com/cathyatseneca/dsanotes/stargazers" target="_blank" class="btn pull-right count-star hidden-xs"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/cathyatseneca/dsanotes/watchers" target="_blank" class="btn pull-right count-watch hidden-xs"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="../" >Algorithms and Data Structures in C++</a>
+    </h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        <li>
+            <a href="https://github.com/cathyatseneca" target="blank">About the author</a>
+        </li>
+        
+
+        
+        <li>
+            <a href="https://github.com/cathyatseneca/dsanotes/issues" target="blank">Questions and Issues</a>
+        </li>
+        
+
+        
+        <li>
+            <a href="https://github.com/cathyatseneca/dsanotes/edit/master/lists/array_implementation.md" target="blank">Edit and Contribute</a>
+        </li>
+        
+
+        
+        <li class="divider"></li>
+        
+
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="index.html">
+                
+                <a href="../index.html">
+                    <i class="fa fa-check"></i> <b>1.</b> Introduction
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="2" data-path="analysis/README.html">
+                
+                <a href="../analysis/README.html">
+                    <i class="fa fa-check"></i> <b>2.</b> Chapter 1:Introduction to Algorithms Analysis
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="analysis/growth.html">
+                            
+                            <a href="../analysis/growth.html">
+                                <i class="fa fa-check"></i> <b>2.1.</b> Growth Rates
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="analysis/notations.html">
+                            
+                            <a href="../analysis/notations.html">
+                                <i class="fa fa-check"></i> <b>2.2.</b> Big-O, Little-o, Theta, Omega
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="analysis/example1.html">
+                            
+                            <a href="../analysis/example1.html">
+                                <i class="fa fa-check"></i> <b>2.3.</b> Analysis of Linear Search
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="lists/README.html">
+                
+                <a href="../lists/README.html">
+                    <i class="fa fa-check"></i> <b>3.</b> Lists
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="lists/array_implementation.html">
+                            
+                            <a href="../lists/array_implementation.html">
+                                <i class="fa fa-check"></i> <b>3.1.</b> Implementation
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="lists/linked_list.html">
+                            
+                            <a href="../lists/linked_list.html">
+                                <i class="fa fa-check"></i> <b>3.2.</b> Linked List
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="the_stack/README.html">
+                
+                <a href="../the_stack/README.html">
+                    <i class="fa fa-check"></i> <b>4.</b> Stacks
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="the_stack/stack_operations.html">
+                            
+                            <a href="../the_stack/stack_operations.html">
+                                <i class="fa fa-check"></i> <b>4.1.</b> Stack Operations
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="the_stack/stack_implemenations.html">
+                            
+                            <a href="../the_stack/stack_implemenations.html">
+                                <i class="fa fa-check"></i> <b>4.2.</b> Stack Implementations
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.3" data-path="the_stack/stack_based_algorithms.html">
+                            
+                            <a href="../the_stack/stack_based_algorithms.html">
+                                <i class="fa fa-check"></i> <b>4.3.</b> Stack Applications
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="queue/README.html">
+                
+                <a href="../queue/README.html">
+                    <i class="fa fa-check"></i> <b>5.</b> Queue
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="5.1" data-path="queue/queue_operations.html">
+                            
+                            <a href="../queue/queue_operations.html">
+                                <i class="fa fa-check"></i> <b>5.1.</b> Queue Operations
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.2" data-path="queue/article.html">
+                            
+                            <a href="../queue/article.html">
+                                <i class="fa fa-check"></i> <b>5.2.</b> Queue Implementations
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="5.3" data-path="queue/queue_applications.html">
+                            
+                            <a href="../queue/queue_applications.html">
+                                <i class="fa fa-check"></i> <b>5.3.</b> Queue Applications
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="6" data-path="recursion/README.html">
+                
+                <a href="../recursion/README.html">
+                    <i class="fa fa-check"></i> <b>6.</b> Recursion
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="6.1" data-path="recursion/the_runtime_stack.html">
+                            
+                            <a href="../recursion/the_runtime_stack.html">
+                                <i class="fa fa-check"></i> <b>6.1.</b> The runtime stack
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.2" data-path="recursion/article.html">
+                            
+                            <a href="../recursion/article.html">
+                                <i class="fa fa-check"></i> <b>6.2.</b> How to Write a Recursive Function
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="6.3" data-path="recursion/drawbacks_of_recursion_and_caution.html">
+                            
+                            <a href="../recursion/drawbacks_of_recursion_and_caution.html">
+                                <i class="fa fa-check"></i> <b>6.3.</b> Drawbacks of Recursion and Caution
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="7" data-path="sorting/README.html">
+                
+                <a href="../sorting/README.html">
+                    <i class="fa fa-check"></i> <b>7.</b> Sorting
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="8" data-path="tables/README.html">
+                
+                <a href="../tables/README.html">
+                    <i class="fa fa-check"></i> <b>8.</b> Tables
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="9" data-path="introduction_to_trees,_binary_search_trees/README.html">
+                
+                <a href="../introduction_to_trees,_binary_search_trees/README.html">
+                    <i class="fa fa-check"></i> <b>9.</b> Introduction to Trees, Binary Search Trees
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="10" data-path="avl_trees/README.html">
+                
+                <a href="../avl_trees/README.html">
+                    <i class="fa fa-check"></i> <b>10.</b> AVL Trees
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="11" data-path="red_black_trees/README.html">
+                
+                <a href="../red_black_trees/README.html">
+                    <i class="fa fa-check"></i> <b>11.</b> Red Black Trees
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="12" data-path="2-3_trees/README.html">
+                
+                <a href="../2-3_trees/README.html">
+                    <i class="fa fa-check"></i> <b>12.</b> 2-3 Trees
+                </a>
+                
+                
+            </li>
+        
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank">Generated using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 36%;min-width: 32%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="1" style="left: 0%;"></a>
+    
+        <a href="../avl_trees/README.html" title="AVL Trees" class="chapter done " data-progress="10" style="left: 4%;"></a>
+    
+        <a href="../red_black_trees/README.html" title="Red Black Trees" class="chapter done " data-progress="11" style="left: 8%;"></a>
+    
+        <a href="../2-3_trees/README.html" title="2-3 Trees" class="chapter done " data-progress="12" style="left: 12%;"></a>
+    
+        <a href="../analysis/README.html" title="Chapter 1:Introduction to Algorithms Analysis" class="chapter done new-chapter" data-progress="2" style="left: 16%;"></a>
+    
+        <a href="../analysis/growth.html" title="Growth Rates" class="chapter done " data-progress="2.1" style="left: 20%;"></a>
+    
+        <a href="../analysis/notations.html" title="Big-O, Little-o, Theta, Omega" class="chapter done " data-progress="2.2" style="left: 24%;"></a>
+    
+        <a href="../analysis/example1.html" title="Analysis of Linear Search" class="chapter done " data-progress="2.3" style="left: 28%;"></a>
+    
+        <a href="../lists/README.html" title="Lists" class="chapter done new-chapter" data-progress="3" style="left: 32%;"></a>
+    
+        <a href="../lists/array_implementation.html" title="Implementation" class="chapter done " data-progress="3.1" style="left: 36%;"></a>
+    
+        <a href="../lists/linked_list.html" title="Linked List" class="chapter  " data-progress="3.2" style="left: 40%;"></a>
+    
+        <a href="../the_stack/README.html" title="Stacks" class="chapter  new-chapter" data-progress="4" style="left: 44%;"></a>
+    
+        <a href="../the_stack/stack_operations.html" title="Stack Operations" class="chapter  " data-progress="4.1" style="left: 48%;"></a>
+    
+        <a href="../the_stack/stack_implemenations.html" title="Stack Implementations" class="chapter  " data-progress="4.2" style="left: 52%;"></a>
+    
+        <a href="../the_stack/stack_based_algorithms.html" title="Stack Applications" class="chapter  " data-progress="4.3" style="left: 56%;"></a>
+    
+        <a href="../queue/README.html" title="Queue" class="chapter  new-chapter" data-progress="5" style="left: 60%;"></a>
+    
+        <a href="../queue/queue_operations.html" title="Queue Operations" class="chapter  " data-progress="5.1" style="left: 64%;"></a>
+    
+        <a href="../queue/article.html" title="Queue Implementations" class="chapter  " data-progress="5.2" style="left: 68%;"></a>
+    
+        <a href="../queue/queue_applications.html" title="Queue Applications" class="chapter  " data-progress="5.3" style="left: 72%;"></a>
+    
+        <a href="../recursion/README.html" title="Recursion" class="chapter  new-chapter" data-progress="6" style="left: 76%;"></a>
+    
+        <a href="../recursion/the_runtime_stack.html" title="The runtime stack" class="chapter  " data-progress="6.1" style="left: 80%;"></a>
+    
+        <a href="../recursion/article.html" title="How to Write a Recursive Function" class="chapter  " data-progress="6.2" style="left: 84%;"></a>
+    
+        <a href="../recursion/drawbacks_of_recursion_and_caution.html" title="Drawbacks of Recursion and Caution" class="chapter  " data-progress="6.3" style="left: 88%;"></a>
+    
+        <a href="../sorting/README.html" title="Sorting" class="chapter  new-chapter" data-progress="7" style="left: 92%;"></a>
+    
+        <a href="../tables/README.html" title="Tables" class="chapter  new-chapter" data-progress="8" style="left: 96%;"></a>
+    
+        <a href="../introduction_to_trees,_binary_search_trees/README.html" title="Introduction to Trees, Binary Search Trees" class="chapter  new-chapter" data-progress="9" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_1672">
+                    
+                        <h1 id="implementation">Implementation</h1>
+<p>There are two typical ways to implement a list.  The first is to use an array like data structure, the second is to use a linked list data structure.  There are advantages and disadvantages to each implementation.</p>
+<p>If you used array, items are stored in memory consecutively and you can have direct access to any particular item through the use of its index.  When sorted, the list can be searched using binary search.  Making the list grow can be expensive and space is often wasted as large amount of space may be allocated but not used</p>
+<p>A linked list is very easy to grow and shrink.  Data is not stored in consecutive memory locations so a large block of contiguous memory is not required even for storing large amounts of data. Each piece of data requires the storage of an extra pointer.  However, the amount of extra data is related to number of items in the list already.  A linked list cannot be searched using binary search as direct access to nodes are not available.</p>
+<h2 id="memory-requirements">Memory Requirements</h2>
+<p>To implement a list using arrays, we allocate more space than is necessary.  The array is used until it is full.  Once an array is full, either all new insertions fail until an item is removed or the array must be reallocated.  The reallocation typically involves creating a larger array, copying over the old data, and making this the array.  As the process of growing an array requires the typically copying of the entire array, this is not something you want to do often.  That is, you do not grow the array a few elements at a time but in large chunks instead.  The exact number of elements to grow by is implementation specific.</p>
+<p>To implement a list using a linked list like structure, each value is put into its own data node.  Each node in the list is then linked with the next node by storing the address of the next node in the list.  The memory usage in this case is at least one extra pointer for each piece of data.  However, nodes are created on an as needed basis.  There are never have unused nodes.  Thus, the amount of memory used to store data in a linked list structure is typically lower than an array until the array is nearly full.</p>
+<p><img src="../assets/lists.png" alt="List Memory Usage"></p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../lists/README.html" class="navigation navigation-prev "><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../lists/linked_list.html" class="navigation navigation-next "><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mixpanel/plugin.js"></script>
+    
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {};
+    gitbook.start(config);
+});
+</script>
+
+    </body>
+</html>
