@@ -1,4 +1,4 @@
-# Stack Based Algorithms
+# Stack Applications
 
 * Bracket checking
  * int bracketcheck(char expr[]);  returns true if expr is a string where (), {} and [] brackets are properly matched.  false if not.

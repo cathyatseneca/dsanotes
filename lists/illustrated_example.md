@@ -21,7 +21,7 @@ curr_=NULL;
 Since the list is empty, all we need to do is create a new node and make start_ and curr_ point to it.  In the new node, the next_ pointer should be NULL as there is no next node:
 
 ```c
-Node* temp=new Node;   //step 1
+Node* temp=new Node;
 temp->data_=newdata;
 temp->next_=NULL;
 start_=temp;
