@@ -15,7 +15,7 @@ int linearSearch(const vector<TYPE>& arr, const TYPE& key){
 }
 ```
 
-We will make a few assumptions.  arr.size() runs in constant time.  That is no matter how big the array is, arr.size() takes the same amount of time to run. 
+We will make a few assumptions.  arr.size() runs in constant time.  That is no matter how big the array is, arr.size() takes the same amount of time to run.
 
 When we run the above algorithm, 2 things can occur.  The first is that we will find the key.  The second is that we won't.  The worst case scenario occurs when key is not in the array.  Thus, let us start by performing the analysis base on that worst case.
 
@@ -48,7 +48,7 @@ Now... using the above we can express T(n) as follows:
 
 T(n) = 6n + 3
 
-The 6n comes from the 6 operations that we do each time through the loop.  We have n elements in the array.  Thus, the loop must run 6n times.  
+The 6n comes from the 6 operations that we do each time through the loop.  We have n elements in the array.  Thus, the loop must run 6n times.
 
 The + 3 comes from the 3 operations that we always have to do no matter what.
 
@@ -74,28 +74,28 @@ In other words... to prove that T(n) = 6n + 3 is O(n) we must find 2 constants \
 
 The important part about this... is to realize that we can pick any constant we want.  So, I will pick the c = 10.  (in fact, I can pick any number > 6).   and \\(n_0 = 1\\)
 
-\\(T(n) = 6n + 3 \\)  <br /> 
-\\(T(0) = 6(0) + 3 = 3 \\) <br /> 
+\\(T(n) = 6n + 3 \\)  <br />
+\\(T(0) = 6(0) + 3 = 3 \\) <br />
 \\(T(1) = 6(1) + 3 = 9 \\) <br />
-\\(T(2) = 6(2) + 3 = 15 \\) <br /> 
-\\(T(3) = 6(3) + 3 = 21 \\) <br /> 
+\\(T(2) = 6(2) + 3 = 15 \\) <br />
+\\(T(3) = 6(3) + 3 = 21 \\) <br />
 ...
 
 our function f(n) = n.
 
 Thus:
 
-\\(c f(n) = n\\)  <br /> 
-\\(c f(0) = 10(0) = 0\\) <br /> 
-\\(c f(1) = 10(1) = 10\\) <br /> 
-\\(c f(2) = 10(2) = 20\\) <br /> 
+\\(c f(n) = n\\)  <br />
+\\(c f(0) = 10(0) = 0\\) <br />
+\\(c f(1) = 10(1) = 10\\) <br />
+\\(c f(2) = 10(2) = 20\\) <br />
 
 
 As you can see the statement T(n) <= cn is true for any value of all \\(n >= n_0\\)
 
 Thus, we have proven that the function is O(n) because we were able to find the two constants \\(c) and \\(n_0\\) needed for the T(n) to be O(n)
 
-This is also the reason why it did not matter if we counted the operations for the size() function call or the [i] operator.  If we counted both of them, 
+This is also the reason why it did not matter if we counted the operations for the size() function call or the [i] operator.  If we counted both of them,
 
 T(n) = 8n + 3
 
@@ -106,7 +106,7 @@ The proof would go exactly the same way except that we can't use \\(n_0 = 1 \\) 
 
 ### Average case analysis
 
-In the previous analysis, we assumed we wouldn't find the data and thus the worst possible case of searching through the entire array was used to do the analysis.  However, what if the item was in the array? 
+In the previous analysis, we assumed we wouldn't find the data and thus the worst possible case of searching through the entire array was used to do the analysis.  However, what if the item was in the array?
 
 Assuming that key is equally likely to be in any element, we would have to search through n elements at worst and n/2 elements on average.
 
@@ -118,6 +118,7 @@ Now since we will at some point find the item, the statement inside the if will 
 	return rc;
 
 These other operations will also run for each iteration of the loop:
+
 
 	i<arr.size() && rc == -1   --> 3 operations
 	i++                        --> 1 operation
