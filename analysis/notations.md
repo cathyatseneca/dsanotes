@@ -46,6 +46,6 @@ Let's take a closer look a the formal definition for big-O analysis
 
 The way to read the above statement is as follows.  n is the size of the data set.  f(n) is a function that is calculated using n as the parameter.  O(f(n)) means that the curve described by f(n) is an upper bound for the resource needs of a function.  that means that if we were to draw a graph of the resource needs of a particular algorithm, it would fall under the curve described by f(n).  What's more, it doesn't need to be under the exact curve of f(n).  It could be under a constant *scaled* curve for f(n)... so instead of having be under the \\(n^2\\) curve, it can be under the \\(10n^2\\) curve or the \\(20n^2\\)curve.  In fact it can be any constant, as long as it is a constant.
 
-Furthermore, the statement does not need to be true for all data sizes.  The \\(n >= n_0\\) portion means that as long as you can find a data size for which the statement is true, and it never becomes untrue for all data sizes larger than that value, then you have met the criteria for big-O
+The other portion of the statement \\(n >= n_0\\) means that \\(T(n)<=cf(n)\\) does not need to be true for all values of n.  It means that as long as you can find a value for which \\(T(n)<=cf(n)\\) is true, and it never becomes untrue for all n larger than that value, then you have met the criteria for the statement T(n) is O(f(n))
 
 

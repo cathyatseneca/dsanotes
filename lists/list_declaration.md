@@ -1,14 +1,14 @@
 # List Declaration
 
 A linked list could be defined as the following.  (Note that there are other ways to encapsulate the idea of linked list.  This is just one way.):
-
+```c
 class Llist{
   Node* start_;
   Node* curr_;
 public:
 ....
 };
-
+```
 The public member functions for a linked list should then provide methods for accessing and manipulating the data stored in the linked list.
 
 In the following discusion we will assume we are writing a linked list of doubles

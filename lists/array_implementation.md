@@ -2,7 +2,7 @@
 
 There are two typical ways to implement a list.  The first is to use an array like data structure, the second is to use a linked list data structure.  There are advantages and disadvantages to each implementation.
 
-If you used array, items are stored in memory consecutively and you can have direct access to any particular item through the use of its index.  When sorted, the list can be searched using binary search.  Making the list grow can be expensive and space is often wasted as large amount of space may be allocated but not used
+If you used array, items are stored in memory consecutively and you can have direct access to any particular item through the use of its index in constant time.  When sorted, the list can be searched using binary search.  Making the list grow can be expensive and space is often wasted as large amount of space may be allocated but not used
 
 A linked list is very easy to grow and shrink.  Data is not stored in consecutive memory locations so a large block of contiguous memory is not required even for storing large amounts of data. Each piece of data requires the storage of an extra pointer.  However, the amount of extra data is related to number of items in the list already.  A linked list cannot be searched using binary search as direct access to nodes are not available.
 
