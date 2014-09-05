@@ -24,4 +24,8 @@ Now... if we were to enqueue to the end of the list, the oldest item would be at
 
 So clearly we need to come up with a better way to handle this.
 
-One way that we can handle this is to track two indices instead of one.  The first is the index of the element at the front of the list.  The second is the index of the element at the back of the list.  When you insert, insert to the index of the back element and increment the index for back.  When you remove, remove by incrementing the index of the front.  The second part of the implementation is that we need to treat the array as if it is a ring.  That is the the index element, is the first element.  If we do not, we will quickly create a list with lots of unused space at the front of the list.
+One way that we can handle this is to track two indices instead of one.  The first is the index of the element at the front of the list.  The second is the index of the element at the back of the list.  When you insert, insert to the index of the back element and increment the index for back.  When you remove, remove by incrementing the index of the front.  The second part of the implementation is that we need to treat the array as if it is a ring.  That is, the next element of the last element is the first element and the previous element of the first element is the last element.  If we do not, we will quickly create a list with lots of unused space at the front of the list and run out of space.
+
+Check out this animation for details:
+
+[Queue Implemented with an array http://cathyatseneca.github.io/DSAnim/web/arrayqueue.html](http://cathyatseneca.github.io/DSAnim/web/arrayqueue.html)

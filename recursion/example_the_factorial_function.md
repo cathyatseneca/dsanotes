@@ -16,7 +16,7 @@ if n==5, then n! would be 5! = 5*4*3*2*1=120
 To write this we must come up with several things.   What is the base case?  In other words, for what value of n do I immediately know what the answer would be without doing more than a simple operation or two.
 
 In this case, we know what 0! is.  It is 1 by definition
-1! is another base case because 1! is simply 1 as well.
+1! is another base case because 1! is simply 1 as well.  However, it is not actually necessary to explicitly state the base case for when n is 1 as we can further reduce that to the 0! base case
 
 So the base case occurs when n is 0 or 1.  In this case, the function can simply return 1
 
@@ -28,14 +28,14 @@ So:
 5! = 5* 4!  but 4! is just 4* 3!  and so on.
 ```
 
-Thus if I had a function that can give me the factorial of any number I can use it to find the factorial of that number-1.  In other words I can use the int factorial(int) function
+Thus if I had a function that can give me the factorial of any number I can use it to find the factorial of that number-1 and thus allowing me to calculate the factorial of the original by multiplying that result with number.  In other words I can use the int factorial(int) function to solve int factorial(int)
 ```c
 int factorial(int n){
-    int rc;                     //stores result of function
-    if(n==1 || n==0){           //check for base case
-        rc=1;                   //if n is 1 or 0 rc is 1
+    int rc;              //stores result of function
+    if(n==1 || n==0){    //check for base case
+        rc=1;            //if n is 1 or 0 rc is 1
     }
-    else{                       //else it is recursive case
+    else{                //else it is recursive case
         rc=n * factorial(n-1);  //rc is n * (n-1)!
     }
     return rc;

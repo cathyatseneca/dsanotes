@@ -41,6 +41,7 @@
        * [Insertion Sort](sorting/insertion_sort.md)
        * [Selection Sort](sorting/selection_sort.md)
    * [Merge Sort](sorting/merge_sort.md)
+       * [Merge Sort Implementation](sorting/merge_sort_code.md)
    * [Quick Sort](sorting/quick_sort.md)
    * [Heap Sort](sorting/heap_sort.md)
 * [Tables](tables/README.md)

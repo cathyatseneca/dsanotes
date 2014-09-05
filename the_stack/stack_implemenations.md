@@ -17,6 +17,10 @@ Recall that the operations are as follows:
 
 With a list that implemented as an array we typically start by creating an array that is bigger than what we need.  To add a value to the end of an array is a constant time operation as long as we track where the end is.  If we were to do that, the most recently added item will be at the back of the array.  Removing that item simply involves decreasing the end of array tracker by one.
 
+Check out this animation for details:
+
+[Stack Implemented with an array http://cathyatseneca.github.io/DSAnim/web/arraystack.html](http://cathyatseneca.github.io/DSAnim/web/arraystack.html)
+
 ### Linked List Implementation
 
 To implement a stack using a linked list, we have to consider the type of linked list we would use and which end of the list we would want to insert to.

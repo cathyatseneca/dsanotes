@@ -7,3 +7,5 @@ Basic operations on the binary Heap include:
 * deleteMin - removes the smallest value in the binary heap.
 
 The idea for the Heap sort is this:  put every value in the array into the binary heap, then repeated call deleteMin to remove the smallest value and put it back into the array.
+
+More Coming soon....
